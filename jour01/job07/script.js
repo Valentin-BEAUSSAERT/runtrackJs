@@ -33,4 +33,4 @@ function jourTravaille(date) {
     }
   }
 
-console.log(jourTravaille(new Date('2024-05-01'))); // Le 1 5 2024 est un jour férié.
+console.log(jourTravaille(new Date('2024-01-01'))); // Le 1 5 2024 est un jour férié.
