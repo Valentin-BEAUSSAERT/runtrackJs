@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner le bouton et le paragraphe par leurs IDs
-    var bouton = document.getElementById("button");
-    var compteur = document.getElementById("compteur");
-
-    // Ajouter un écouteur d'événements de type 'click' au bouton
-    bouton.addEventListener("click", function() {
-        // À chaque clic, convertir le texte du paragraphe en nombre et l'incrémenter de 1
-        var nombreDeClics = parseInt(compteur.textContent, 10);
-        nombreDeClics += 1;
-        compteur.textContent = nombreDeClics; // Mettre à jour le texte du paragraphe avec la nouvelle valeur
+    document.addEventListener('keydown', function(event) {
+        // Vérifier si la touche pressée est une lettre (a-z)
+        if (event.key.length === 1 && event.key.match(/[a-z]/i)) {
+            // Sélectionner le textarea
+            var keylogger = document.getElementById("keylogger");
+            
+            // Si le focus n'est pas sur le textarea, ajouter la lettre
+            if (document.activeElement !== keylogger) {
+                keylogger.value += event.key;
+                keylogger.value += event.key;
+            }
+        }
     });
 });
