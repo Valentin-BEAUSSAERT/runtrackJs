@@ -1,0 +1,16 @@
+body {
+    min-height: 4096px; /* Définir la taille minimale du body */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+footer {
+    position: fixed; /* Rendre le footer fixé */
+    bottom: 0; /* Aligner le footer en bas de la page */
+    left: 0; /* Aligner le footer à gauche de la page */
+    width: 100%; /* Faire en sorte que le footer prenne toute la largeur */
+    height: 50px; /* Définir la hauteur du footer */
+    background-color: #000000; /* Couleur initiale du footer */
+    color: #000000; /* Couleur du texte dans le footer */
+    text-align: center; /* Centrer le texte dans le footer */
+    line-height: 50px; /* Centrer le texte verticalement */
+}
