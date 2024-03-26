@@ -15,3 +15,4 @@ function showhide() {
         document.body.appendChild(newArticle); // Ajouter l'article au body du document
     }
 }
+
