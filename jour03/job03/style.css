@@ -1,0 +1,8 @@
+#rainbow img {
+    width: 100px; /* Ou une autre taille appropriée */
+    cursor: pointer; /* Indique que les images peuvent être cliquées */
+}
+
+#resultMessage {
+    color: green; /* La couleur par défaut; changera avec JavaScript */
+}
