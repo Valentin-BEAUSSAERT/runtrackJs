@@ -1,0 +1,19 @@
+#taquin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px; /* ajustez selon la taille de votre grille */
+    height: 300px; /* ajustez selon la taille de votre grille */
+}
+
+.tile {
+    width: 100%; /* utilisez 100% pour remplir la cellule de grille */
+    height: 100%; /* utilisez 100% pour remplir la cellule de grille */
+    overflow: hidden; /* empêche le débordement du contenu */
+}
+
+.tile img {
+    width: 100%; /* assurez-vous que l'image remplit le conteneur .tile */
+    height: 100%; /* assurez-vous que l'image remplit le conteneur .tile */
+    object-fit: cover;
+}
