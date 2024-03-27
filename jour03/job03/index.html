@@ -2,26 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
+    <title>Jeu de Taquin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="shuffleButton">Mélanger</button>
-    <div id="rainbow">
-        <img src="./images/logo1.PNG">
-        <img src="./images/logo2.PNG">
-        <img src="./images/logo3.PNG">
-        <img src="./images/logo4.PNG">
-        <img src="./images/logo5.PNG">
-        <img src="./images/logo6.PNG">
-        <img src="./images/logo7.PNG">
-        <img src="./images/logo8.PNG">
-        <img src="./images/logo9.PNG">
-        
+    <div id="game-container">
+        <button id="restartButton">Recommencer</button>
+        <div id="taquin">
+            <!-- Les tuiles seront générées par JavaScript -->
+        </div>
+        <div id="victoryMessage" style="display: none; color: green;"></div>
     </div>
-    <p id="resultMessage"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

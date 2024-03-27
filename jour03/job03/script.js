@@ -1,40 +1,60 @@
 $(document).ready(function() {
-    $("#shuffleButton").click(function() {
-        var images = $("#rainbow img").get();
-        images.sort(function() { return 0.5 - Math.random(); }); // Mélange simple
-        $("#rainbow").empty().append(images);
+    initializeGame();
+
+    $('#restartButton').click(function() {
+        initializeGame();
+    });
+});
+
+function initializeGame() {
+    const taquin = $('#taquin');
+    taquin.empty();
+    let tiles = [];
+    for (let i = 1; i <= 8; i++) {
+        tiles.push($(`<div class="tile"><img src="images/logo${i}.PNG" alt="Image ${i}"></div>`));
+    }
+    tiles.push($('<div class="tile empty"></div>')); // Case vide
+    tiles.sort(() => Math.random() - 0.5); // Mélange simple
+
+    tiles.forEach(tile => {
+        taquin.append(tile);
     });
 
-    var firstClickedImg = null;
-    // Utilise la délégation d'événements pour gérer le clic sur les images
-    $("#rainbow").on("click", "img", function() {
-        if (!firstClickedImg) {
-            firstClickedImg = this; // Stocke la première image cliquée
-        } else {
-            // Échange les sources des images au lieu de remplacer les éléments
-            var secondClickedImgSrc = $(this).attr("src");
-            $(this).attr("src", $(firstClickedImg).attr("src"));
-            $(firstClickedImg).attr("src", secondClickedImgSrc);
-            firstClickedImg = null; // Réinitialise pour le prochain clic
-
-            // Vérifie l'ordre après chaque échange
-            checkOrder();
-        }
+    $('.tile:not(.empty)').click(function() {
+        moveTile(this);
     });
+}
 
-    function checkOrder() {
-        // Supposons que les noms des fichiers indiquent l'ordre correct, ex: arc1.png, arc2.png, etc.
-        var isCorrect = true;
-        $("#rainbow img").each(function(index) {
-            if (!$(this).attr("src").includes("arc" + (index + 1))) {
-                isCorrect = false;
-            }
+function moveTile(tile) {
+    const emptyTile = $('.empty');
+    const tileIndex = $(tile).index();
+    const emptyIndex = $(emptyTile).index();
+
+    const isAdjacent = (Math.abs(tileIndex - emptyIndex) === 1 && Math.floor(tileIndex / 3) === Math.floor(emptyIndex / 3)) || 
+                        (Math.abs(tileIndex - emptyIndex) === 3 && Math.floor(tileIndex / 3) !== Math.floor(emptyIndex / 3));
+
+    if (isAdjacent) {
+        // On échange juste les positions de la tuile cliquée et de la tuile vide
+        const tileImg = $(tile).children('img').detach();
+        $(emptyTile).append(tileImg);
+        $(emptyTile).removeClass('empty');
+        $(tile).addClass('empty');
+
+        // Une fois le déplacement effectué, réattribuer les gestionnaires d'événements click
+        $('.tile:not(.empty)').off('click').click(function() {
+            moveTile(this);
         });
 
-        if (isCorrect) {
-            $("#resultMessage").text("Vous avez gagné").css("color", "green");
-        } else {
-            $("#resultMessage").text("Vous avez perdu").css("color", "red");
-        }
+        checkVictory();
     }
-});
+}
+
+
+function checkVictory() {
+    const tilesOrder = $('#taquin .tile:not(.empty) img').toArray().map(img => $(img).attr('src').match(/logo(\d)\.PNG$/)[1]);
+    // Vérifie si les tuiles sont dans l'ordre de 1 à 8
+    if (tilesOrder.join('') === '12345678') {
+        $('#victoryMessage').text('Bravo ! Vous avez gagné.').css('color', 'green').show();
+    }
+}
+
