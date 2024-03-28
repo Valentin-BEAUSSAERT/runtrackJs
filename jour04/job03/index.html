@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trieur de données Pokémon</title>
+</head>
+<body>
+    <form id="filter-form">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="">Tous les types</option>
+            <!-- Les options seront générées par JavaScript -->
+        </select>
+
+        <input type="button" id="filter" value="Filtrer">
+    </form>
+
+    <div id="results">
+        <!-- Les résultats filtrés s'afficheront ici -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
