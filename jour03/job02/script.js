@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     function checkOrder() {
-        // Supposons que les noms des fichiers indiquent l'ordre correct, ex: arc1.png, arc2.png, etc.
+        // Vérifie si les sources des images correspondent à l'ordre arc1, arc2, arc3, etc.
         var isCorrect = true;
         $("#rainbow img").each(function(index) {
             if (!$(this).attr("src").includes("arc" + (index + 1))) {

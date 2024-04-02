@@ -1,8 +1,7 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Empêche le formulaire de se soumettre directement
     
-    // Ici, vous pouvez ajouter une vérification asynchrone, par exemple, via fetch()
-    // Pour cet exemple, nous allons juste simuler une vérification
+  // Récupérer les éléments du formulaire et les messages d'erreur
     
     const email = document.getElementById('email');
     const password = document.getElementById('password');
@@ -27,6 +26,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Simuler une vérification asynchrone
     setTimeout(() => {
         alert('Connexion réussie!');
-        // Ici, vous pourriez rediriger l'utilisateur ou recharger la page
+    // Remplacer le message d'alerte par une redirection vers une autre page    
     }, 1000);
 });
