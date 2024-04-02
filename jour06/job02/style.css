@@ -1,0 +1,127 @@
+/* Réinitialisation de base pour enlever les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DCDCDC;
+}
+
+/* Styles pour la navbar - ajustés pour éviter les conflits avec Bootstrap */
+.navbar ul {
+    list-style-type: none; /* Retire les puces de la liste */
+    padding-left: 0; /* Annule le padding par défaut de Bootstrap */
+    height: 6vh;
+    align-items: center; /* Centre verticalement les liens dans la navbar */
+    display: flex; /* Utilise flexbox pour un alignement horizontal */
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 14px 16px;
+}
+
+.principalTitle {
+    font-size: 2.5em;
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 2vh;
+    margin: 0 auto;
+    position: relative;
+    left: 35vh;
+}
+
+/* Styles pour le contenu */
+.principalContent {
+    width: 90%;
+    height: 80%;
+    background-color: #E8ECEE;
+    margin: 0 auto;
+    padding: 2vh; /* Ajouté pour l'espacement interne */
+    position: relative;
+    left: 35vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre pour la profondeur */
+}
+
+.principalContent h1 {
+    font-size: 2.5em;
+    padding: 20px;
+}
+
+.textPrincipal {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+    line-height: 2.2em;
+    padding: 0 30px;
+    padding-bottom: 20px;
+}
+
+.textSecondaire {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0 30px;
+    border-top: 1px solid #DCDCDC;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.buttonOne {
+    display: block; /* Pour s'assurer que le bouton est un bloc */
+    margin-left: 30px; /* Aligné avec le texte */
+    margin-top: 2vh;
+    font-size: 0.9em;
+    position: relative;
+    height: 4vh;
+    
+    /* Bootstrap a ses propres classes de boutons, si vous souhaitez utiliser les vôtres, veillez à ne pas les mélanger. */
+}
+
+/* Bootstrap Pagination - Utilise les classes de pagination de Bootstrap et ajoute un style personnalisé pour l'alignement */
+.pagination {
+    justify-content: center; /* Centrer la pagination avec flexbox */
+    padding-top: 2vh;
+    position: relative;
+    left: 35vh;
+    bottom: 4vh;
+}
+
+
+
+
+/* Styles pour la sidebar - ajustés pour éviter les conflits avec Bootstrap */
+/* Styles pour la sidebar */
+.list-group {
+    height: 51vh; /* Hauteur totale de la vue */
+    width: 30%;
+    top: 10%; /* Positionnée à 10% du haut de la fenêtre de vue */
+    overflow-x: hidden; /* Cache le débordement horizontal */
+    position: relative;
+    left: 32.5vh;
+    margin-right: 3vh;
+    top: 8vh;
+}
+
+/* Style pour les liens dans la barre latérale */
+.list-group a {
+    font-size: 0.8em;
+    color: #818181; /* Couleur des liens pour les rendre visibles */
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Change la couleur des liens au survol */
+.list-group a:hover {
+    color: white;
+    background-color: rgba(0, 42, 255, 0.879);
+}
+
+.card {
+    position: relative;
+    bottom: 56vh;
+    margin-left: 3vh;
+ }
+
