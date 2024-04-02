@@ -1,0 +1,70 @@
+/* Réinitialisation de base pour enlever les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DCDCDC;
+}
+
+/* Styles pour la navbar */
+.navbar {
+    background-color: #F8F9FA; /* Couleur de fond */
+    overflow: hidden; /* Assure que le contenu de la navbar s'adapte à sa hauteur */
+    height: 6vh;
+    text-align: left;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 14px 16px;
+}
+
+.principalTitle {
+    font-size: 2.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Styles pour le contenu */
+
+.principalContent{
+    width: 60%;
+    height: 40vh;
+    background-color: #E8ECEE;
+    margin: 0 auto;
+}
+
+.principalContent h1 {
+    font-size: 2.5em;
+    padding: 20px;
+}
+
+.textPrincipal {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+    line-height: 2.2em;
+    padding: 0 30px;
+    padding-bottom: 20px;
+}
+
+.textSecondaire {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0 30px;
+    border-top: #DCDCDC 2px solid;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button {
+    position: relative;
+    left: 30px;
+    height: 4.5vh;
+    width: 20vh;
+    font-size: 0.9em;
+    
+}
