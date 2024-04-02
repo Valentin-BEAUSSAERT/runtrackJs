@@ -43,7 +43,7 @@ body {
     margin: 0 auto;
     padding: 2vh; /* Ajouté pour l'espacement interne */
     position: relative;
-    left: 35vh;
+    left: 36.5vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre pour la profondeur */
 }
 
@@ -127,5 +127,27 @@ body {
     margin-left: 3vh;
  }
 
-a
+.progress {
+    position: relative;
+    bottom: 47vh;
+    left: 34.5vh;
+    width: 60%;
+}
 
+#AI {
+    position: relative;
+    font-size: 1.5em;
+    top: 70vh;
+    left: 107vh;
+
+}
+
+.mb-3 {
+    position: relative;
+    bottom: 45vh;  
+}
+
+ {
+    position: relative;
+    bottom: 45vh;
+}
