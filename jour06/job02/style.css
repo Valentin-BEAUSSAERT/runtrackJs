@@ -6,10 +6,12 @@
 }
 
 body {
-    background-color: #DCDCDC;
+    background-color: #DCDCDC !important;
 }
 
+
 /* Styles pour la navbar - ajustés pour éviter les conflits avec Bootstrap */
+
 .navbar ul {
     list-style-type: none; /* Retire les puces de la liste */
     padding-left: 0; /* Annule le padding par défaut de Bootstrap */
@@ -124,4 +126,6 @@ body {
     bottom: 56vh;
     margin-left: 3vh;
  }
+
+
 
