@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <!-- Lien vers Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Lien vers Materialize Icones -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Inscription</h2>
+            <form>
+                <!-- Civilité -->
+                <p>
+                  <label>
+                    <input name="civilite" type="radio" checked />
+                    <span>Monsieur</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="civilite" type="radio" />
+                    <span>Madame</span>
+                  </label>
+                </p>
+
+                <!-- Text inputs -->
+                <div class="input-field">
+                    <input id="prenom" type="text" class="validate">
+                    <label for="prenom">Prénom</label>
+                </div>
+                <div class="input-field">
+                    <input id="nom" type="text" class="validate">
+                    <label for="nom">Nom</label>
+                </div>
+                <div class="input-field">
+                    <input id="adresse" type="text" class="validate">
+                    <label for="adresse">Adresse</label>
+                </div>
+
+                <!-- Email -->
+                <div class="input-field">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Adresse Email</label>
+                </div>
+
+                <!-- Password -->
+                <div class="input-field">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Mot de passe</label>
+                </div>
+                <div class="input-field">
+                    <input id="confirm_password" type="password" class="validate">
+                    <label for="confirm_password">Confirmez le mot de passe</label>
+                </div>
+
+                <!-- Passions -->
+                <p>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Informatique</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Voyages</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Sport</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Lecture</span>
+                  </label>
+                </p>
+
+                <!-- Submit Button -->
+                <button class="btn waves-effect waves-light" type="submit" name="action">Valider
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">Vous pouvez utiliser des lignes et des colonnes ici pour organiser votre contenu de pied de page.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Liens</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Inscription</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Connexion</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Rechercher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lien vers Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
